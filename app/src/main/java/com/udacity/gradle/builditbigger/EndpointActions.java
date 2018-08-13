@@ -33,7 +33,9 @@ public class EndpointActions extends AsyncTask<Void,Void, Joke> {
 
     @Override
     protected void onPostExecute(Joke joke) {
-        jokeGetter.onFinished(joke.getJoke(),joke.getPunchline());
+        if(joke!=null) {
+            jokeGetter.onFinished(joke.getJoke(), joke.getPunchline());
+        }
     }
 
     public Joke GetTheJoke(){

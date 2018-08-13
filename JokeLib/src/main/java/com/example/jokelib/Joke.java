@@ -1,8 +1,6 @@
 package com.example.jokelib;
 
 public class Joke{
-    public static final String ParcelableKeyJoke = "ThisIsTheKeyForStoringAJokeInAParcelable";
-    public static final String ParcelableKeyPunchline = "ThisisTheKeyForStoringAPunchlineInAParcelable";
     private String _joke;
     private String _punchline;
 

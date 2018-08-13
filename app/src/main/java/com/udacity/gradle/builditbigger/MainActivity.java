@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity implements EndpointActions.J
         /* This code directly got the joke and launched the activity.
         Joke joke = Jokes.getRandomJoke();
         Intent jokedisplayactivity = new Intent(this,jokedisplay.class);
-        jokedisplayactivity.putExtra(Joke.ParcelableKeyJoke,joke.get_joke());
-        jokedisplayactivity.putExtra(Joke.ParcelableKeyPunchline,joke.get_punchline());
+        jokedisplayactivity.putExtra(ParcelableKeyJoke,joke.get_joke());
+        jokedisplayactivity.putExtra(ParcelableKeyPunchline,joke.get_punchline());
         startActivity(jokedisplayactivity);
         */
 
@@ -61,8 +61,8 @@ public class MainActivity extends AppCompatActivity implements EndpointActions.J
     @Override
     public void onFinished(String joke, String punchline) {
         Intent jokedisplayactivity = new Intent(this,jokedisplay.class);
-        jokedisplayactivity.putExtra(com.example.jokelib.Joke.ParcelableKeyJoke,joke);
-        jokedisplayactivity.putExtra(com.example.jokelib.Joke.ParcelableKeyPunchline,punchline);
+        jokedisplayactivity.putExtra(jokedisplay.ParcelableKeyJoke,joke);
+        jokedisplayactivity.putExtra(jokedisplay.ParcelableKeyPunchline,punchline);
         startActivity(jokedisplayactivity);
     }
 }

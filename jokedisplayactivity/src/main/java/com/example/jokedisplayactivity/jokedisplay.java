@@ -4,9 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.example.jokelib.Joke;
-
 public class jokedisplay extends AppCompatActivity {
+    public static final String ParcelableKeyJoke = "ThisIsTheKeyForStoringAJokeInAParcelable";
+    public static final String ParcelableKeyPunchline = "ThisisTheKeyForStoringAPunchlineInAParcelable";
 
     TextView JokeTextView;
     TextView PunchlineTextView;
@@ -18,8 +18,8 @@ public class jokedisplay extends AppCompatActivity {
         PunchlineTextView = findViewById(R.id.tv_punchline);
         Bundle data = getIntent().getExtras();
         if(data !=null) {
-            String joke = data.getString(Joke.ParcelableKeyJoke);
-            String punchline = getIntent().getExtras().getString(Joke.ParcelableKeyPunchline);
+            String joke = data.getString(ParcelableKeyJoke);
+            String punchline = getIntent().getExtras().getString(ParcelableKeyPunchline);
             if (joke != null) {
                 JokeTextView.setText(joke);
                 PunchlineTextView.setText(punchline);
